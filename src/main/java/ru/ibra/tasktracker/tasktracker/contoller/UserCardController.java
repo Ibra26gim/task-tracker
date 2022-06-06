@@ -15,11 +15,11 @@ public class UserCardController {
     private UserCardService userCardService;
 
     @GetMapping("/get-user-card/{id}")
-    public UserCardEntity getByid(@PathVariable Long id){
+    public UserCardEntity getById(@PathVariable Long id){
         return userCardService.getById(id);
     }
 
-    @PostMapping("create-user")
+    @PostMapping("/create-user")
     public UserCardEntity save(@RequestBody UserCardEntity userCardEntity){
         return userCardService.save(userCardEntity);
     }

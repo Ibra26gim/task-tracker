@@ -1,5 +1,6 @@
 package ru.ibra.tasktracker.tasktracker.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -40,7 +41,7 @@ public class TaskCardEntity {
     @Column(name = "spended_time_in_minutes")
     private Integer spendedTimeInMinute;
 
-    @JsonManagedReference
+    @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_task_id", referencedColumnName = "card_id")
     private UserCardEntity userCardEntity;
