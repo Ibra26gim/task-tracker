@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file:
+        db/changelog/scripts/user_card.sql
+  - include:
+      file:
+        db/changelog/scripts/task_card.sql
+
+
